@@ -1,0 +1,22 @@
+[user]
+	name = Sjoerd Crijns
+	email = s.crijns@umcutrecht.nl
+[core]
+	editor = emacs
+[giggle]
+	compact-mode = true
+	main-window-maximized = true
+	main-window-geometry = 0x0+0+0
+	history-view-vpane-position = 449
+	main-window-view = HistoryView
+	file-view-vpane-position = 626
+	file-view-hpane-position = 384
+
+[mergetool "latex"]
+	cmd = latexdiff $LOCAL $REMOTE
+[alias]
+ ldiff = difftool --no-prompt -t latex
+[gui]
+	recentrepo = D:/iCom/icom
+[push]
+	default = matching
