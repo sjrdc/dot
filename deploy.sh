@@ -6,3 +6,6 @@ dotdir=$(dirname $(readlink -f $BASH_SOURCE))
 ln -s $dotdir/emacs/emacs.d ~
 ln -s $dotdir/emacs/.emacs ~
 
+# deploy matlab startup script
+ln -s $dotdir/matlab/startup.m
+
