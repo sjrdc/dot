@@ -2,13 +2,17 @@
 
 dotdir=$(dirname $(readlink -f $BASH_SOURCE))
 deploydir=~
+STOW=stow
+deploycmd="$STOW --dir $dotdir --target $deploydir"
 
-# deploy emacs stuff
-ln -s $dotdir/emacs/emacs.d $deploydir
-ln -s $dotdir/emacs/.emacs $deploydir
+type $STOW >/dev/null 2>&1 || \
+    { echo >&2 "I require $deploycmd but it's not installed. Aborting."; \
+      exit 1;
+    }
 
-# deploy matlab startup script
-ln -s $dotdir/matlab/startup.m $deploydir
-
-# deploy git stuff
-ln -s $dotdir/git/.gitconfig $deploydir
+for d in $(ls $dotdir); do
+    if [ -d $d ]; then
+	$deploycmd $d 2>&1 \
+	    | grep --invert-match precedence
+    fi
+done
