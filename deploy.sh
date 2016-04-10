@@ -6,7 +6,7 @@ STOW=stow
 deploycmd="$STOW --dir $dotdir --target $deploydir"
 
 type $STOW >/dev/null 2>&1 || \
-    { echo >&2 "I require $deploycmd but it's not installed. Aborting."; \
+    { echo >&2 "requires $STOW but it's not installed. Aborting."; \
       exit 1;
     }
 
