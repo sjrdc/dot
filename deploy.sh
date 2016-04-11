@@ -1,8 +1,19 @@
 #!/bin/bash
 
+STOW=stow
+REALPATH=realpath
+type $STOW >/dev/null 2>&1 || \
+    { echo >&2 "requires $STOW but it's not installed. Aborting."; \
+      exit 1;
+    }
+type $REALPATH >/dev/null 2>&1 || \
+    { echo >&2 "requires $realpath but it's not installed. Aborting."; \
+      exit 1;
+    }
+
 dotdir=$(dirname $(readlink -f $BASH_SOURCE))
 deploydir=$(realpath $HOME)
-STOW=stow
+
 deploycmd="$STOW --dir $dotdir --target $deploydir"
 
 type $STOW >/dev/null 2>&1 || \
