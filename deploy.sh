@@ -1,7 +1,7 @@
 #!/bin/bash
 
 dotdir=$(dirname $(readlink -f $BASH_SOURCE))
-deploydir=~
+deploydir=$(realpath $HOME)
 STOW=stow
 deploycmd="$STOW --dir $dotdir --target $deploydir"
 
