@@ -1,6 +1,6 @@
 #!/bin/bash
 
-STOW=stow
+STOW=xstow
 REALPATH=realpath
 type $STOW >/dev/null 2>&1 || \
     { echo >&2 "requires $STOW but it's not installed. Aborting."; \
