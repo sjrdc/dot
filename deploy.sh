@@ -23,7 +23,6 @@ type $STOW >/dev/null 2>&1 || \
 
 for d in $(ls $dotdir); do
     if [ -d $d ]; then
-	$deploycmd $d 2>&1 \
-	    | grep --invert-match precedence
+	$deploycmd $d 2>&1 
     fi
 done
