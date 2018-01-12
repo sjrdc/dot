@@ -15,8 +15,10 @@
 [mergetool "latex"]
 	cmd = latexdiff $LOCAL $REMOTE
 [alias]
- ldiff = difftool --no-prompt -t latex
+ 	ldiff = difftool --no-prompt -t latex
+	lg = log --oneline --all --remotes --full-history --graph --decorate
 [gui]
 	recentrepo = D:/iCom/icom
 [push]
 	default = matching
+
