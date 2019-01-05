@@ -103,3 +103,9 @@
 ;; add a column marker that indicates long lines in c-mode
 (require 'column-marker)
 (add-hook 'c-mode-common-hook (lambda () (interactive) (column-marker-1 80)))
+
+(add-hook 'c++-mode-hook 'irony-mode)
+(add-hook 'c-mode-hook 'irony-mode)
+(add-hook 'objc-mode-hook 'irony-mode)
+
+(add-hook 'irony-mode-hook 'irony-cdb-autosetup-compile-options)
