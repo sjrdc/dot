@@ -86,10 +86,6 @@
 (setq ispell-dictionary "british")
 (ispell-change-dictionary "british")
 
-;; activate git
-(add-to-list 'load-path "/usr/share/doc/git/contrib/emacs")
-(require 'git)
-
 ;; a quick way of finding corresponding file
 (add-hook 'c-mode-common-hook
   (lambda() 
