@@ -4,9 +4,9 @@ alias lh='ll -h'
 alias lll='l -lF'
 alias l='ls --color=auto'
 
+alias npp='/c/Program\ Files\ \(x86\)/Notepad++/notepad++.exe'
 alias maek='make'
 
-alias mvdcm='mkdir dcm; mv *.dcm dcm;'
 alias rd='\rm -rf'
 alias ..='cd ..'
 
