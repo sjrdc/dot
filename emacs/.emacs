@@ -87,10 +87,6 @@
 (setq ispell-dictionary "british")
 (ispell-change-dictionary "british")
 
-;; activate git
-(add-to-list 'load-path "/usr/share/doc/git/contrib/emacs")
-(require 'git)
-
 ;; a quick way of finding corresponding file
 (add-hook 'c-mode-common-hook
   (lambda() 
@@ -104,3 +100,6 @@
 ;; add a column marker that indicates long lines in c-mode
 (require 'column-marker)
 (add-hook 'c-mode-common-hook (lambda () (interactive) (column-marker-1 80)))
+
+(setq c-default-style "linux"
+      c-basic-offset 4)
