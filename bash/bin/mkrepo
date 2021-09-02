@@ -1,5 +1,11 @@
 #!/bin/bash
 
+if [[ $# -ne 1 ]]; then
+    echo "Illegal number of parameters"
+    echo "Usage: mkrepo <reponame>"
+    exit 2
+fi
+
 reponame=$1
 
 mkdir $reponame
