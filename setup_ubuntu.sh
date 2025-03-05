@@ -15,3 +15,5 @@ sudo apt install -y \
      emacs
 
 python3 -m venv ~/.local/env
+source ~/.local/env/activate
+pip install pdm 
