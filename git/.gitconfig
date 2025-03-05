@@ -12,10 +12,7 @@
 	file-view-vpane-position = 626
 	file-view-hpane-position = 384
 
-[mergetool "latex"]
-	cmd = latexdiff $LOCAL $REMOTE
 [alias]
- 	ldiff = difftool --no-prompt -t latex
 	lg = log --oneline --all --remotes --full-history --graph --decorate
 [gui]
 	recentrepo = D:/iCom/icom
@@ -24,3 +21,17 @@
 
 [init]
 	defaultBranch = main
+
+[diff]
+    tool = bc3
+[difftool]
+    prompt = false
+[difftool "bc3"]
+    cmd = '/mnt/c/Program Files/Beyond Compare 4/BComp.exe' \"$(wslpath -aw $LOCAL)\" \"$(wslpath -aw $REMOTE)\"
+[merge]
+    tool = bc3
+[mergetool]
+    prompt = false
+[mergetool "bc3"]
+    trustExitCode = true
+    cmd = '/mnt/c/Program Files/Beyond Compare 4/BComp.exe' \"$(wslpath -aw $LOCAL)\" \"$(wslpath -aw $REMOTE)\"
