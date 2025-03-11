@@ -6,13 +6,15 @@ sudo apt install -y \
      terminator \
      cmake \
      g++ \
+     gdb \
+     build-essential \
      libboost-dev \
      python3-pdm-pep517 \
      python3-venv \
      node-http-server \
      emscripten \
      xstow \
-     emacs
+     emacs 
 
 python3 -m venv ~/.local/env
 source ~/.local/env/activate
