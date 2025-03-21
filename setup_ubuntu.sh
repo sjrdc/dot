@@ -33,3 +33,11 @@ sudo apt install -y \
 python3 -m venv ~/.local/env
 source ~/.local/env/activate
 pip install pdm 
+
+
+# install misc
+sudo apt install -y \
+     xstow
+
+# hush login message
+touch ~/.hushlogin
